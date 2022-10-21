@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		7A551BAE2902B08B00D772E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A551BAD2902B08B00D772E9 /* AppDelegate.swift */; };
-		7A551BB02902B08B00D772E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A551BAF2902B08B00D772E9 /* ViewController.swift */; };
+		7A551BB02902B08B00D772E9 /* MainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A551BAF2902B08B00D772E9 /* MainChatViewController.swift */; };
 		7A551BB32902B08B00D772E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A551BB12902B08B00D772E9 /* Main.storyboard */; };
 		7A551BB52902B08B00D772E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A551BB42902B08B00D772E9 /* Assets.xcassets */; };
 		7A551BB82902B08B00D772E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A551BB62902B08B00D772E9 /* LaunchScreen.storyboard */; };
+		7A551BC62902B24500D772E9 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A551BC52902B24500D772E9 /* Bindable.swift */; };
+		7A551BC92902B33F00D772E9 /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A551BC82902B33F00D772E9 /* MainChatTableViewCell.swift */; };
+		7A551BCB2902BFF100D772E9 /* MainChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A551BCA2902BFF100D772E9 /* MainChatCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A551BAA2902B08B00D772E9 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A551BAD2902B08B00D772E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A551BAF2902B08B00D772E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A551BAF2902B08B00D772E9 /* MainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewController.swift; sourceTree = "<group>"; };
 		7A551BB22902B08B00D772E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A551BB42902B08B00D772E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A551BB72902B08B00D772E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A551BB92902B08B00D772E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A551BC52902B24500D772E9 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		7A551BC82902B33F00D772E9 /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
+		7A551BCA2902BFF100D772E9 /* MainChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,73 @@
 		7A551BAC2902B08B00D772E9 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				7A551BC32902B1BC00D772E9 /* Info_Plist */,
+				7A551BC22902B1B900D772E9 /* Extensions */,
+				7A551BC72902B31C00D772E9 /* Cells */,
+				7A551BC12902B1B700D772E9 /* ViewModels */,
+				7A551BC02902B1B500D772E9 /* Views */,
+				7A551BBF2902B1B200D772E9 /* Models */,
 				7A551BAD2902B08B00D772E9 /* AppDelegate.swift */,
-				7A551BAF2902B08B00D772E9 /* ViewController.swift */,
-				7A551BB12902B08B00D772E9 /* Main.storyboard */,
 				7A551BB42902B08B00D772E9 /* Assets.xcassets */,
-				7A551BB62902B08B00D772E9 /* LaunchScreen.storyboard */,
 				7A551BB92902B08B00D772E9 /* Info.plist */,
 			);
 			path = Project;
+			sourceTree = "<group>";
+		};
+		7A551BBF2902B1B200D772E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A551BC02902B1B500D772E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A551BC42902B1EC00D772E9 /* Storyboards */,
+				7A551BAF2902B08B00D772E9 /* MainChatViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A551BC12902B1B700D772E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7A551BC22902B1B900D772E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A551BC52902B24500D772E9 /* Bindable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A551BC32902B1BC00D772E9 /* Info_Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Info_Plist;
+			sourceTree = "<group>";
+		};
+		7A551BC42902B1EC00D772E9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7A551BB12902B08B00D772E9 /* Main.storyboard */,
+				7A551BB62902B08B00D772E9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7A551BC72902B31C00D772E9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7A551BC82902B33F00D772E9 /* MainChatTableViewCell.swift */,
+				7A551BCA2902BFF100D772E9 /* MainChatCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A551BB02902B08B00D772E9 /* ViewController.swift in Sources */,
+				7A551BCB2902BFF100D772E9 /* MainChatCollectionViewCell.swift in Sources */,
+				7A551BB02902B08B00D772E9 /* MainChatViewController.swift in Sources */,
 				7A551BAE2902B08B00D772E9 /* AppDelegate.swift in Sources */,
+				7A551BC92902B33F00D772E9 /* MainChatTableViewCell.swift in Sources */,
+				7A551BC62902B24500D772E9 /* Bindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
